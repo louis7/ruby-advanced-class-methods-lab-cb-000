@@ -33,13 +33,13 @@ def self.find_by_name(name)
 self.all.find{|person| person.name == name}
 end
 
-def self.find_or_create_by_name(name)
-  if self.find_by_name(name) == name
-    return self.find_by_name(name)
+def self.find_or_create_by_name(name_of_song)
+  if self.find_by_name(name_of_song)
+    return self.find_by_name(name_of_song)
   else
-    self.create_by_name(name)
-
+    self.create_by_name(name_of_song)
   end
+end
 
   def self.alphabetical
 @@all.sort_by! { |m| m.person.name }
