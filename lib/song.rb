@@ -35,13 +35,9 @@ end
 
 
 
-  def self.alphabetical
-@@all.sort_by! { |m| m.person.name }
-  end
 
 
 
-end
 
 
 
