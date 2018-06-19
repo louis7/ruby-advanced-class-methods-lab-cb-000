@@ -42,8 +42,7 @@ def self.find_or_create_by_name(name)
   end
 
   def self.alphabetical
-    @@sorted = @@all.sort!
-    @@sorted
+@@all.sort_by! { |m| m.person.name }    
   end
 
 
