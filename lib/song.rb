@@ -50,6 +50,22 @@ def self.alphabetical
 end
 
 
+def self.new_from_filename(song)
+  instance_of_song = self.new
+  titleandartist = song.gsub(".mp3", "").split(" - ")
+  instance_of_song.name = titleandartist[1]
+  instance_of_song.artist_name = titleandartist[0]
+return instance_of_song
+end
 
+def self.create_from_filename(song)
+  @@all << self.new_from_filename(song)
+
+end
+
+
+def self.destroy_all
+  self.all.clear
+end
 
 end
