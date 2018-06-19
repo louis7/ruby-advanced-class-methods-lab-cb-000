@@ -37,8 +37,7 @@ end
 
 
 def self.find_or_create_by_name(name)
-   variable = self.find_by_name(name)
-  if variable.name == name
+  if self.find_by_name(name)
     return variable
   else
     self.create_by_name(name)
